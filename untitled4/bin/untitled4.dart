@@ -8,8 +8,13 @@ void main() {
  
 
   // Printing the role models
-  RoleModel.fackRoles();
-  print(RoleModel.fackRoles());
-Userdata.testusers();
-print(Userdata.testusers());
+  Userdata.testusers().forEach((element) {
+    print(element.createdUser);
+    print(element.userActive);
+    print(element.userMail);
+    print(element.userId);
+    print(element.userElo);
+    print(element.username);
+
+  });
 }
