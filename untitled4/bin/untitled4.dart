@@ -1,5 +1,12 @@
-import 'package:untitled4/Main.dart' as untitled4;
+import 'package:untitled4/role_model.dart';
 
-void main(List<String> arguments) {
-  
+
+
+
+void main() {
+ 
+
+  // Printing the role models
+  RoleModel.fackRoles();
+  print(RoleModel.fackRoles());
 }
