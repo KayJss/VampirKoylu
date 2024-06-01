@@ -19,6 +19,16 @@ class Userdata {
   testusers.add(Userdata("user3", 3, "user3@example.com", true));
   testusers.add(Userdata("user4", 4, "user4@example.com", false));
   testusers.add(Userdata("user5", 5, "user5@example.com", true));
+  testusers.add(Userdata("user6", 6, "user5@example.com", true));
+  testusers.add(Userdata("user7", 7, "user5@example.com", true));
+  testusers.add(Userdata("user8", 8, "user5@example.com", true));
+  testusers.add(Userdata("user9", 9, "user5@example.com", true));
+  testusers.add(Userdata("user10", 10, "user5@example.com", true));
+  testusers.add(Userdata("user11", 11, "user5@example.com", true));
+  testusers.add(Userdata("user12", 12, "user5@example.com", true));
+  testusers.add(Userdata("user13", 13, "user5@example.com", true));
+  testusers.add(Userdata("user14", 14, "user5@example.com", true));
+
 
   return testusers;
 }
