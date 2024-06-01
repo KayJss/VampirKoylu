@@ -3,16 +3,18 @@ import 'functions.dart';
 
 void RoleAssing(){
 
-Map<String, RoleModel> userRoles = {};
+Map<String, roles> userRoles = {};
 
-Userdata getRandomName() {
+var userList = Userdata.testusers();
+
+String getRandomName() {
  Random random = Random();
- var userList = Userdata.testusers();
- return userList[random.nextInt(userList.length)];
+ return userList[random.nextInt(userList.length)].userId.toString();
 }
 
-String randomGuy = getRandomName().toString();
+String RandomVampir = getRandomName();
+userRoles[RandomVampir] = roles.vampir;
+userList.remove(RandomVampir);
 
-print(randomGuy);
-
+print(userRoles);
 }
