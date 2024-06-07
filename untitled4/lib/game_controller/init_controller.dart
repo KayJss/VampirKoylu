@@ -16,12 +16,11 @@ class InitController {
   void _asignRules() {
     var userAvilableList = userList;
 
+    print(userAvilableList.length);
+
     ///get how many vampier in the game
     int vampiresNumber = (userList.length / 4).round();
-
-    print("userList length is: ${userAvilableList.length}");
-    print("vampier number is: $vampiresNumber");
-
+    print("Vampier number $vampiresNumber");
     /// asign vimpier
     /// for each vampier it will remove from the list after it added
     for (int i = 0; i < vampiresNumber; i++) {
@@ -30,12 +29,33 @@ class InitController {
       userAvilableList.removeWhere((element) => element.userId == getUser);
     }
 
-    print("left userList length is: ${userAvilableList.length}");
 
     /// asign doctor
+    int doctorNumber = (userList.length / 10).round();
+       print("doctor number $doctorNumber");
+    for (int i = 0; i < doctorNumber; i++) {
+    String getDoctorUser = _getRandomName(userAvilableList);
+    players.addAll({getDoctorUser: Roles.doktor});
+    userAvilableList.removeWhere((element) => element.userId == getDoctorUser);
+    }
+    
     /// asign scooter
+    int spoterNumber = (userList.length / 10).round();
+     print("spoter number $spoterNumber");
+    for (int i = 0; i < spoterNumber; i++) {
+    String getSpoterUser = _getRandomName(userAvilableList);
+    players.addAll({getSpoterUser: Roles.gozcu});
+    userAvilableList.removeWhere((element) => element.userId == getSpoterUser);
+    }
     /// vileger
-    for (var user in userList) {}
+  
+  print("avilavle list ${userAvilableList.length}");
+    for (int i=0; i< userAvilableList.length; i++) {
+  
+    String getUser = userAvilableList[i].userId;
+    players.addAll({getUser: Roles.koylu});
+    
+    }
   }
 
   String _getRandomName(List<Userdata> userList) {

@@ -1,6 +1,6 @@
 class Userdata {
   String username;
-  String? userId;
+  String userId;
   int userElo = 0;
   bool userActive = false;
   String userMail;

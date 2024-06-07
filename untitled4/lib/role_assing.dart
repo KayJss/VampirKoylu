@@ -34,7 +34,7 @@ void RoleAssing() {
   for (var user in userList) {
     String RandomVilliger = getRandomName();
     userRoles[RandomVilliger] = Roles.koylu;
-    userList.remove(RandomVilliger);
+   
   }
 
   String randomrole = getRandomRoles().toString();
