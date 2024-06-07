@@ -18,15 +18,27 @@ String getRandomRoles(){
  
 }
 
-
+int spoter = (userList.length / 6).round();
 int vampire = (userList.length / 4).round();
 
 for(int i = 0; i < vampire; i++){
 String RandomVampir = getRandomName();
 userRoles[RandomVampir] = roles.vampir;
 userList.remove(RandomVampir);
-
 }
+
+for(int i = 0; i < spoter; i++){
+String RandomSpoter = getRandomName();
+userRoles[RandomSpoter] = roles.gozcu;
+userList.remove(RandomSpoter);
+}
+
+for (var user in userList){
+String RandomVilliger = getRandomName();
+userRoles[RandomVilliger] = roles.koylu;
+userList.remove(RandomVilliger);
+}
+
 
 
 String randomrole = getRandomRoles().toString();
